@@ -409,7 +409,7 @@ internal class InnertubeImpl: Innertube {
                 }
                 .build()
 
-            post( Endpoints.PLAYER, body, useLogin = useLogin ).body<PlayerResponseImpl>()
+            post( endpoint, body, useLogin = useLogin ).body<PlayerResponseImpl>()
         }
 
     override suspend fun homePage( localization: Localization ): Result<HomePage> =
