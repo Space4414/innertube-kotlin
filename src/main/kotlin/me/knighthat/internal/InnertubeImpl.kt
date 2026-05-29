@@ -394,6 +394,12 @@ internal class InnertubeImpl: Innertube {
             val context = getContext( context, localization, visitorData, useLogin )
             val body = PlayerBody.builder( context )
                 .videoId( songId )
+                // Tell YouTube this client has acknowledged content/age-restriction warnings.
+                // Without these flags null is serialised in the JSON and YouTube returns
+                // LOGIN_REQUIRED for age-restricted tracks.  All major open-source YTM
+                // clients (InnerTune, ViMusic, RiMusic) set both to true.
+                .racyCheckOk( true )
+                .contentCheckOk( true )
                 .apply {
                     signatureTimestamp?.also( ::signatureTimestamp )
 
