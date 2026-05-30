@@ -26,7 +26,7 @@ public class Constants {
     public static final String CHROME_WINDOWS_VISITOR_DATA = "Cgtfa01kaENlQ0p4Zyj938LFBjIKCgJVUxIEGgAgLw%3D%3D";
 
     @NotNull
-    public static final String IOS_API_KEY = "AIzaSyC9XL3ZjWddXya6X74dJoCTL-WEYFDNX30";
+    public static final String IOS_API_KEY = "AIzaSyB-63vPrdThhKuerbB2N_l7Kwwcxj6yUAc";
 
     @NotNull
     public static final String YOUTUBE_MUSIC_URL = "https://music.youtube.com";
